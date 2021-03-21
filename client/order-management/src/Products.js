@@ -6,6 +6,7 @@ const ProductContainer = styled.div`
  margin-left: 200px;
  margin-top: 50px;
  margin-bottom: 100px;
+ flex-wrap: wrap;
 `;
 const Product = styled.div`
  box-shadow: 1px 1px 5px #9E9E9E;
@@ -13,6 +14,7 @@ const Product = styled.div`
  padding: 10px;
  border-radius: 5px;
  transition: all 200ms ease-in;
+ min-width: 300px;
  &:hover{
     box-shadow: 1px 3px 20px #9E9E9E;
     transform: translateZ(50px);
