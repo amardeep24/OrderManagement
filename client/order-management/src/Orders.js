@@ -2,20 +2,22 @@ import React from "react";
 import styled from 'styled-components';
 
 const OrderContainer = styled.div`
-    border-radius: 10px;
-    margin: 50px 0px 100px 200px;"
+    margin: 50px 0px 100px 100px;"
 `;
 
 const Order = styled.div`
     text-align: left;
+    border-radius: 5px;
     border: 1px solid black;
+    width: 93%;
+    margin: 10px;
 `;
 const OrderHeader = styled.div`
     background-color: #f6f6f6;
 `;
 
 const OrderBody = styled.div`
-
+    border-top: 1px solid black;
 `;
 const OrderFooter = styled.div`
 

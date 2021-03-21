@@ -10,6 +10,23 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import styled from 'styled-components';
+
+const Login = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+`;
+const AppName = styled.div`
+  background-color: #febd69;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 20px;
+  padding: 5px;
+`;
 
 class App extends React.Component {
 
@@ -73,12 +90,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        {!this.state.isLoggedIn && <GoogleLogin
-          clientId="250948059519-isaef6h25pq6fnlm2qcs9negm9t0ff06.apps.googleusercontent.com"
-          buttonText="Login"
-          onSuccess={this.onSignIn.bind(this)}
-          cookiePolicy={'single_host_origin'}
-        />}
+        {!this.state.isLoggedIn &&
+          <Login>
+            <AppName>Orders App</AppName>
+            <GoogleLogin
+              clientId="250948059519-isaef6h25pq6fnlm2qcs9negm9t0ff06.apps.googleusercontent.com"
+              buttonText="Login"
+              onSuccess={this.onSignIn.bind(this)}
+              cookiePolicy={'single_host_origin'}
+            />
+          </Login>
+        }
         <div id="App">
           {this.state.isLoggedIn &&
             <Router>

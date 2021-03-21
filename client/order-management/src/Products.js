@@ -8,15 +8,25 @@ const ProductContainer = styled.div`
  margin-bottom: 100px;
 `;
 const Product = styled.div`
- box-shadow: 1px 3px 1px #9E9E9E;
+ box-shadow: 1px 1px 5px #9E9E9E;
  margin: 10px 10px 10px 10px;
+ padding: 10px;
+ border-radius: 5px;
+ transition: all 200ms ease-in;
+ &:hover{
+    box-shadow: 1px 3px 20px #9E9E9E;
+    transform: translateZ(50px);
+ }
 `;
 const ProductButton = styled.div`
  background-color: #febd69;
  border-radius: 10px;
  border: 2px solid black; 
- margin: 10px 10px 10px 10px;
  cursor: pointer;
+ width: 50%;
+ margin: auto;
+ margin-top: 10px;
+ margin-bottom: 10px;
 `;
 
 const NewOrder = styled.div`
